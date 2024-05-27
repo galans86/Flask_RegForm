@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h2>Hello, {{ user.username }} {{ user.surname }}! </h2>
+    <p>{{ user.email }}</p>
+    <form action="/exit" method="post">
+        <p>
+        <input type="submit" value="Выйти">
+        </p>
+    </form>
+</div>
+{% endblock %}
